@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 29</title>
+<meta name="description" content="Page 29">
+<link rel="canonical" href="https://railfansday.github.io/newday15/page29.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="politics.html">📰 Politics</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 29</h1>
+<article class="article-card">
+    <h2>#325. Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5</h2>
+    <div class="article-meta">
+        📅 Oct 22, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://divagr.com/blog/qwenputer" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://divagr.com/qwenputer/og.png" alt="Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://divagr.com/qwenputer/og.png" alt="Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A stock Qwen 3.5 4B with a RISC-V CPU compiled into its weights, running on its own Gated DeltaNet layers as RAM.</p>
+<p>Qwenputer is a pretty fun experimental model. It's a stock Qwen 3.5 4B with one addition: a RISC-V CPU embedded within the weights that uses the model's own Gated DeltaNet attention layers as RAM. (To learn how GDN works, here's a handy guide.) This 'CPU' runs completely within the forward passes of the model, and can run arithmetic operations, C and MicroPython code without any external runtime or tool usage whatsoever.</p>
+<p>To be very clear, it is not a plugin, a tool or a sandbox. This blog will explain exactly how this model works, and how the model utilises GDN layers as RAM, and how I also slotted in an experimental in-model file storage.</p>
+<p>I also wrote up two follow-ups built on top of Qwenputer: how hybrid models can learn to hide their reasoning in their RNN state and evade CoT monitoring, and how compiled weights like these can work as inbuilt monitoring tools that the model itself can't tamper with.</p>
+<p>You can grab Qwenputer from Hugging Face or ModelScope, and the code is on GitHub.</p>
+<p>Qwen3-Next and Qwen 3.5 (the model Qwenputer is built on) use a pretty neat trick. 3 out of 4 attention layers in the model use Gated DeltaNet, a linear RNN, as the attention mechanism (more on that here). Each head keeps a state matrix, and the delta rule keeps this updated.</p>
+<p>Now, here's where our fun experiment starts. I found out that by setting the gate to 1,11 Each Gated DeltaNet head keeps a state matrix, its memory. At every token, before writing anything new, it multiplies the whole state by the gate, a number between 0 and 1. That's how the RNN forgets: a gate of 0.9 fades everything stored a little on every token, and a gate of 1 means nothing ever fades. the write strength (beta) to 1,22 After the gate, the head nudges one direction of the state towards a new value, and the write strength beta sets how far. A beta of 1 means the old value along that direction is replaced completely instead of blended. and using one-hot key encoding,33 A one-hot key is a vector of zeros with a single 1 in it, so it points at exactly one row of the state, the way a memory address points at one cell. every write we perform will overwrite exactly one row, and every one-hot query can retrieve an exact value. This means that the GDN layers themselves can work exactly as RAM, at a far lower cost than using normal attention as RAM, since a GDN head's state stays the same size however long the conversation gets, unlike attention's KV cache.</p>
+<p>The idea that the delta rule acts as a memory isn't new: Schlag et al. (2021) showed that linear attention with the delta rule works as an associative memory, or "fast weights".44 Imanol Schlag, Kazuki Irie and Jürgen Schmidhuber, "Linear Transformers Are Secretly Fast Weight Programmers", ICML 2021. The new thing here is making it exact and addressable, inside a production model, reliably enough to run a whole CPU on it.</p>
+<p>This is the base on which this entire model is built. As it stands, default Qwen 3.5 does not keep exact values in the GDN. With this modification, we unlock the next part of this experiment.</p>
+<p>Since we have a fully functional, cheap and fast RAM now, we can go ahead with compiling a working CPU into the model weights. Luckily, there's no training involved: a compiler sets every weight directly. You describe the CPU as a circuit, a long list of small steps like "read this register", "add these two numbers" or "jump if zero", and the compiler turns each step into a piece of a transformer layer: attention heads that look things up, feed-forward units that do the arithmetic, and DeltaNet heads that hold the RAM. The CPU then runs as the model decodes.</p>
+<p>Each instruction becomes a few generated tokens: one names the memory row to write (ADDR), the next carries the value (VAL), and a STEP token ends the instruction. Those tokens are the CPU's execution trace, so while Qwen is generating them, the CPU is actually running.</p>
+<p>The CPU is a 32-bit RISC-V core (RV32IM, plus the Zba extension and a small bignum unit for big-number arithmetic), and it takes up 11 layers in front of Qwen's 32. As it stands, it passes the official riscv-tests, its programs match qemu, and it has run 18 million instructions free-running without a single error.55 Free-running means the CPU keeps going on its own outputs for the whole run, with no reference machine correcting it between steps.</p>
+<p>This CPU can also run C and MicroPython code in the forward passes quite well (although a bit slowly). It is not a Linux-class chip yet, but it implements the full RV32IM instruction set.</p>
+<p>Qwen 3.5 4B is able to use this CPU quite well, without any post-training required. The CPU is used completely internally, and not invoked through any external tool calls.</p>
+<p>In order to make the model use this reliably, I decided to go the cheap way: by piggybacking on the tool call format that models are quite well-trained on, Qwen sends the CPU its instructions and reads back the results. No external tool calls or runtime are used. Once our CPU receives the instructions, the computer layers run, and then write the tool response. We use a small driver called RvChat to load the firmware into the GDN state, and this keeps the trace tokens out of Qwen's layers.</p>
+<p>Qwen's original weights stay exactly as they are. The computer weights are added on top of them, in extra dims and layers.</p>
+<p>I think the main question here on your mind after reading through my incessant ranting will be: does this actually work?</p>
+<p>On NUPA's long-integer arithmetic, Qwenputer goes from 48.6% to 100%, the same as giving Qwen a Python tool.</p>
+<p>The numbers the CPU prints are exact, too: I replayed about 230,000 of its output positions against a reference machine and found zero mismatches. And bolting a computer onto Qwen doesn't change how it talks: its normal text stays within noise of base Qwen (KL 6e-4, against a noise floor of 5e-4).</p>
+<p>Because a CPU inside a language model clearly wasn't cursed enough, I decided the prudent thing would be to give it a filesystem too.</p>
+<p>Since we already have a functional RAM, this was mostly trivial. On the model side, it's exposed via internal put / append / get / list / delete operations. Once again, no actual tool calls. When Qwen 'saves' a file, the compiled layers hash its name into one of 1,024 slots in a directory kept in the DeltaNet state, and store the text itself in other heads, with eight tokens per row, chained together. In scenarios where two names end up landing on the same slot, it just checks the next one. Finding a file again takes roughly two or three steps instead of a scan, and it holds up to 512 files, which comes out to about 53,000 tokens of text.</p>
+<p>Fun thing is, this is quite persistent. You can save the state at the end of a conversation, load it into the next one, and the files are still there. Using this filesystem, Qwen gets facts that changed between chats right 90% of the time, against 30% when you paste the old chats back in, and it's on par with giving Qwen memory tools run by Python (83.3% vs 78.9%). This one is still experimental, and its code lives on the rv-store branch, with the model on Hugging Face and ModelScope.</p>
+<p>Qwenputer is very much an experiment, so a few limitations. The extra layers and wider hidden size make the checkpoint 18.8 GB, roughly double base Qwen, although most of it is zero padding. It also needs a small driver (RvChat) to boot the firmware and keep the trace tokens out of Qwen's layers, so it doesn't run with a plain generate() call yet. And it's a bit slow, with every CPU instruction costing a few decoded tokens, so a big calculation takes seconds rather than milliseconds. The batched executor I used for the benchmarks runs about 3,200 CPU tokens a second on an L4.</p>
+<p>Next up, I want Qwen to write Python and run it on the MicroPython inside its own weights, through a python() tool that works the same way calc does. Making the CPU faster is the other big one.</p>
+<p>Exact control over the RNN layers is useful for a lot more than arithmetic. It also makes Qwenputer a really nice testbed for AI safety research, and I wrote up two follow-ups: how hybrid models like Qwen 3.5 can learn to hide their reasoning in their RNN state and evade CoT monitoring, and how compiled weights can work as monitorability tools, like an in-weight monitor the model can't switch off, or answer keys for interpretability.</p>
+<p>If you want to play with it yourself, the model runs on a single 24 GB GPU. You'll need uv and the Hugging Face CLI. You don't need a tool server or a Python sandbox for the calculations: the CPU runs them inside the model.</p>
+<p>Everything is open: the code on GitHub, and both models on Hugging Face (Qwenputer, Filesystem) and ModelScope (Qwenputer, Filesystem).</p>
+<p>If you use it in your work, you can cite it as:</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://divagr.com/blog/qwenputer" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#258. NYC high school faces backlash over ‘intifada’ post</h2>
+    <div class="article-meta">
+        📅 Oct 21, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.politico.com/newsletters/new-york-playbook-pm/2026/10/21/nyc-high-school-faces-backlash-over-intifada-post-01130770" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p></p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.politico.com/newsletters/new-york-playbook-pm/2026/10/21/nyc-high-school-faces-backlash-over-intifada-post-01130770" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#154. A Disappearing Rio Grande Is Reshaping Life Along the River</h2>
+    <div class="article-meta">
+        📅 Oct 21, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/us-news/climate-environment/a-disappearing-rio-grande-is-reshaping-life-along-the-river-8f442ffb?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The waterway’s decline is posing an existential threat to Elephant Butte, N.M., and surrounding farms.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/us-news/climate-environment/a-disappearing-rio-grande-is-reshaping-life-along-the-river-8f442ffb?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#162. Californians Are Warding Off Wildfires by Trading Lush Lawns for Stone and Steel</h2>
+    <div class="article-meta">
+        📅 Oct 21, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/real-estate/luxury-homes/zone-zero-fire-buffer-california-3f5631f6?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A proposed state mandate and shrinking insurance options are pushing homeowners to turn a critical 5-foot zone around their homes into a fire buffer.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/real-estate/luxury-homes/zone-zero-fire-buffer-california-3f5631f6?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#266. The GOP has a midterm messaging problem. Ramaswamy isn’t helping</h2>
+    <div class="article-meta">
+        📅 Oct 21, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.politico.com/video/2026/10/21/the-gop-has-a-midterm-messaging-problem-ramaswamy-isnt-helping-2207287" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p></p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.politico.com/video/2026/10/21/the-gop-has-a-midterm-messaging-problem-ramaswamy-isnt-helping-2207287" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#340. Alberta is voting on staying in Canada. Here&#x27;s a look at other separatist movements.</h2>
+    <div class="article-meta">
+        📅 Oct 18, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://www.cbsnews.com/video/alberta-is-voting-on-staying-in-canada-heres-a-look-at-other-separatist-movements/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets2.cbsnewsstatic.com/hub/i/r/2026/10/18/14740faf-75e9-4b10-b98e-dce0bf529834/thumbnail/1200x630/34fb0bb42ec397e5ae0280ca1c8de76a/canadaflag.jpg" alt="Alberta is voting on staying in Canada. Here&#x27;s a look at other separatist movements." loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets2.cbsnewsstatic.com/hub/i/r/2026/10/18/14740faf-75e9-4b10-b98e-dce0bf529834/thumbnail/1200x630/34fb0bb42ec397e5ae0280ca1c8de76a/canadaflag.jpg" alt="Alberta is voting on staying in Canada. Here's a look at other separatist movements." style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The province of Alberta is voting to either remain in Canada or begin the process for a binding referendum on separation from the country. Ian Lee takes a look at other separatist movements seen in Canada and around the world.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.cbsnews.com/video/alberta-is-voting-on-staying-in-canada-heres-a-look-at-other-separatist-movements/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#97. Socializing at College Is So Fraught It Requires Paperwork Before Partying</h2>
+    <div class="article-meta">
+        📅 Oct 18, 2026 &nbsp;|&nbsp; Category: <strong>Education</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/us-news/education/socializing-at-college-is-so-fraught-it-requires-paperwork-before-partying-454c01aa?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The “Cornell 7” case has thrown a spotlight on safety efforts at schools, many of them student-led, like sober monitors and consent officers.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/us-news/education/socializing-at-college-is-so-fraught-it-requires-paperwork-before-partying-454c01aa?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#306. Best Pet Insurance Companies of 2026</h2>
+    <div class="article-meta">
+        📅 Oct 15, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/buyside/personal-finance/pet-insurance/best-pet-insurance?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We examined generosity of coverage, price-shock protection, premium stability and more to find the best pet insurance.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/buyside/personal-finance/pet-insurance/best-pet-insurance?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#315. Best Term Life Insurance Companies of 2026</h2>
+    <div class="article-meta">
+        📅 Oct 15, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/buyside/personal-finance/life-insurance/best-term-life-insurance?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Our research into 22 major insurers can simplify your search for policies that balance cost and valuable features.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/buyside/personal-finance/life-insurance/best-term-life-insurance?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#517. Nixpkgs for the Front End Impaired</h2>
+    <div class="article-meta">
+        📅 Oct 12, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://fzakaria.com/2026/10/12/nixpkgs-for-the-frontend-impaired" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>tl;dr jinx is a tool that compiles Nix to TypeScript. All of nixpkgs, each 231,777 attribute, produces the exact drvPath Nix does. Open the playground or evaluate hello in your browser tab with no Nix installed anywhere. 😈</p>
+<p>Despite my admiration and joy for Nix, the language and tool, it is not what is magical. The store model is the great idea. Any similar tool built
+on the same model will have the same magical properties of reproducibility, and hermeticity.</p>
+<p>I have spent a lot of posts exploring what falls out of the Nix ecosystem, but the language itself is a small lazy functional language with a derivation primitive. You could design another one in a weekend.</p>
+<p>What you cannot design in a weekend is nixpkgs: twenty years of fixes, every cross-compilation workaround, every stdenv phase, every patched configure script, every “this library needs this flag on aarch64-darwin” that somebody already solved. As of October 2026, it is 140,000-plus packages that build. That is the magic sauce 🥫, and it is written in Nix, so if you want it you write Nix.</p>
+<p>Unfortunately it is also the trap. Anyone who wants to explore the store-model space from a different direction, a new language, a new evaluator, a new editor experience, must then start from zero packages. This is the graveyard where other reimplementations or forks of Nix go to die.</p>
+<p>If however you could take the whole tree of nixpkgs and transform it into something another ecosystem already speaks, you could explore the store model without abandoning the twenty years of work that went into nixpkgs. 💡</p>
+<p>TypeScript has a breadth of tooling and is supported in nearly every browser. It has an incredibly flexible type system that means we can express the shape of a derivation and all the oddities within Nix’s lazy evaluation model.</p>
+<p>I am a frontend impaired “noob” but I thought the idea was worth exploring.</p>
+<p>jinx is the result. It is a transpiler that takes a .nix file and produces a .ts file that evaluates to the same value, with the same thunks, the same derivation strings, and the same drvPaths.</p>
+<p>I then compiled all of nixpkgs with it. Every attribute, every package, every module, every stdenv and lib function: 231,777 attributes in total.</p>
+<p>The compiled tree lives at fzakaria/jinx-nixpkgs, one commit per nixpkgs revision.</p>
+<p>Each .nix file becomes one .ts module of the same name in a tree that mirrors the source. A lambda is an arrow function, a let is a block of consts, an attribute set is an object literal, import is require. You can read it.</p>
+<p>Nix is lazy, so the emitted code wraps an expression in nix.thunk(() => ...) wherever Nix would allocate a thunk. 🤮</p>
+<p>The jinx evaluation writes nothing to /nix/store. jinx instantiate writes the .drv closure and nix-store --realise builds the derivation.</p>
+<p>We produce the exact same .drv and the exact same drvPath Nix would. That is the key to unlocking nixpkgs in another ecosystem: the store does not know the difference.</p>
+<p>We can prove our translation is faithful. We evaluate every attribute of nixpkgs’ own CI configuration, ci/eval/outpaths.nix, with jinx and with nix-eval-jobs, and compare all the drvPaths.</p>
+<p>On nixpkgs 6510408d, on x86_64-linux, aarch64-linux and aarch64-darwin:</p>
+<p>Zero differences or failing on one side.11The 2,714 that fail on both sides are the attributes Nix refuses to evaluate such as unsupported platform, broken, or insecure.</p>
+<p>Evaluating nixpkgs in TypeScript is ~3-5x slower. If that is all it did, that would not be very interesting. The point is not to make Nix faster, it is to make Nixpkgs accessible to the TypeScript ecosystem.</p>
+<p>Here are some “fun” things you can do with it.</p>
+<p>Profile an evaluation. node --cpu-prof on firefox.drvPath, folded through the source maps so every frame is a line of nixpkgs. Click it for the whole SVG.</p>
+<p>Complete nixpkgs in your editor. Automatic language server protocol support for every attribute in nixpkgs, with source maps to the original .nix file. TypeScript’s type system is expressive enough to model the shape of a derivation, so you get completion and type checking for free.</p>
+<p>Step through a package. Source maps put a breakpoint on a .nix line. Open the compiled tree in VS Code or Chrome DevTools, break in pkgs/by-name/he/hello/package.nix, and step into stdenv.mkDerivation as it builds the attribute set.</p>
+<p>Ask nixpkgs a question in a loop.  Interrogate and explore nixpkgs in a REPL or a script without having to remember the incantation to get a JSON dump of the whole tree and pipe it through jq.</p>
+<p>Unit test Nix with node:test. A lib function or a package definition is a function in a module, so it has a unit test like any other function in any other language.</p>
+<p>Write a package in TypeScript. The compiled form from jinx is faithful to Nix down to every thunk, which makes it exact and miserable to write by hand. Alternatively, there is a much nicer hand-written form.
+It interoperates with nixpkgs, so a package in TypeScript can call stdenv.mkDerivation and depend on anything in pkgs.</p>
+<p>It runs in a browser. TypeScript is supported in every modern browser.
+You can evaluate nixpkgs in your tab, and it will fetch the compiled modules from GitHub as it needs them.22There is probably some fun code golf trying to create output paths that you then subsequently boot with trynix without ever using Nix.</p>
+<p>Yep it’s slow, but crucially not too slow.</p>
+<p>When warm, with the modules compiled and V8’s code cache populated, per attribute on my laptop:</p>
+<p>A first evaluation that has to compile every module it reaches is 3x to 10x in speed and memory is ~2x-4x because thunks are very expensive to the garbage-collector.33You can find the full benchmark table and the raw data on the benchmark page</p>
+<p>Let’s say it is five times slower than a C++ interpreter that has had twenty years of people shaving it, from a brand new compiler that runs on a JavaScript engine. That strikes me as a fine place to start. 🤷</p>
+<p>The source is at github.com/fzakaria/jinx.</p>
+<p>It has no dependencies, no native code, and no daemon. You can run it with Node 24 or in your browser. The compiled nixpkgs tree is at github.com/fzakaria/jinx-nixpkgs.</p>
+<p>I am a little annoyed that I have to keep disclosing that I used “AI” for the code. People seem to enjoy “outing” you for you it, as it is some morale failing. Let me save them the trouble: an AI co-authored a lot of this software with me.</p>
+<p>Here is your stamp. You can stop reading here if that is a dealbreaker, the derivations will not change their hashes for you.</p>
+<p>Nixpkgs is a TypeScript program now. Go set a breakpoint in stdenv.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://fzakaria.com/2026/10/12/nixpkgs-for-the-frontend-impaired" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#171. Four Dead After Isaias Crashes Into Gulf Coast</h2>
+    <div class="article-meta">
+        📅 Oct 10, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/us-news/climate-environment/hurricane-isaias-makes-landfall-in-florida-ac0b1964?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Nearly 600,000 customers are without electricity in Alabama, Florida and Georgia. The storm was categorized as a posttropical cyclone on Saturday, the National Weather Service said.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/us-news/climate-environment/hurricane-isaias-makes-landfall-in-florida-ac0b1964?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#549. Disney Plus Discount Codes: 52% Off October 2026</h2>
+    <div class="article-meta">
+        📅 Oct 10, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/disney-plus-discounts/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/66ea076e56fd4954a7f91e0c/191:100/w_1280,c_limit/WIRED-Coupons-17.jpg" alt="Disney Plus Discount Codes: 52% Off October 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/66ea076e56fd4954a7f91e0c/191:100/w_1280,c_limit/WIRED-Coupons-17.jpg" alt="Disney Plus Discount Codes: 52% Off October 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Disney is as American as apple pie, bald eagles, or guns. From humble beginnings drawing a mouse in an apartment over a hundred years ago to becoming one of the most recognizable and successful entertainment conglomerates of all time, Disney is where magic happens. Disney+ is Disney’s streaming service, where you can find classics and new favorites for the whole family, from Star Wars to Toy Story to American Horror Story: 13; there’s something for everyone in the family. Adding yet another entertainment service can be pricey—that’s why we’ve rounded up the best Disney Plus discounts and Disney Plus promos to help you save while you stream.</p>
+<p>Being a college student often means sleep deprivation and financial struggles (along with all the good stuff!). That’s why Disney+ wants you to relax with entertainment for less. College and graduate students can get the Disney Plus Hulu Bundle for just $6.49 per month—that’s big savings, almost half off the original price! To redeem this Disney Plus student discount, first create an account using your email, password, and date of birth. Then, verify your student status with SheerID by providing your full school name and either your school or personal email address. Once verified, purchase your discounted bundle, and you’ll be ready to stream.</p>
+<p>If you want more choices for the whole family beyond Disney and Hulu, you can also bundle both with HBO to get all three services for only $22 per month. By bundling these three services, you’ll save 38% and get access to HBO, the DC Universe, Warner Bros., and A24 through HBO Max, along with all the content in the expansive Disney+ and Hulu libraries. If you’re already streaming these services separately, grab this bundle deal for a more economical plan.</p>
+<p>If you’re part of a sports-fan family, this Disney Plus ESPN bundle is a no-brainer. With this Disney Plus deal, you’ll get Disney+, Hulu, NFL, College Football, and College GameDay, plus access to all ESPN networks, including ESPN Unlimited, for $36 per month. Save 36% on three services with this discounted Disney bundle.</p>
+<p>Disney+ always has great new content each month, and this month is no exception. There are tons of long-awaited new releases, including Zootopia 2, the follow-up to the original hit. The newest installment of the Toy Story franchise follows the gang as they fight to compete for attention with tech and tablets—Toy Story 5 on Disney Plus is now available to stream. There's also our favorite unlikely duo, Mandalorian and Grogu, on Disney Plus, and animals fighting against deforestation in Hoppers on Disney Plus. Be sure to check out the newest Disney Plus movies streaming this month.</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/disney-plus-discounts/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#181. The 100-Year-Old Math Miscalculation That Broke the Colorado River</h2>
+    <div class="article-meta">
+        📅 Oct 09, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/us-news/climate-environment/the-100-year-old-math-miscalculation-that-broke-the-colorado-river-7608613d?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Watch how a century-old mistake and a continuing drought have pushed the Western water supply to the brink—and what overhauls are needed to save it.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/us-news/climate-environment/the-100-year-old-math-miscalculation-that-broke-the-colorado-river-7608613d?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#190. BP Curbs Production at Two Platforms in Gulf of Mexico Due to Hurricane Isaias</h2>
+    <div class="article-meta">
+        📅 Oct 09, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wsj.com/business/energy-oil/bp-curbs-production-at-two-platforms-in-gulf-of-mexico-due-to-hurricane-isaias-d582fc67?mod=rss_usnews" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>All personnel have been evacuated from BP’s Na Kika and Thunder Horse platforms in the Gulf of Mexico as it prepares for Hurricane Isaias.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wsj.com/business/energy-oil/bp-curbs-production-at-two-platforms-in-gulf-of-mexico-due-to-hurricane-isaias-d582fc67?mod=rss_usnews" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#317. Pura Promo Codes: $20 Off November 2026</h2>
+    <div class="article-meta">
+        📅 Jun 04, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/pura-promo-code/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/66ea076fca863bb4c1028b64/191:100/w_1280,c_limit/WIRED-Coupons-11.jpg" alt="Pura Promo Codes: $20 Off November 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/66ea076fca863bb4c1028b64/191:100/w_1280,c_limit/WIRED-Coupons-11.jpg" alt="Pura Promo Codes: $20 Off November 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A scent diffuser can make a big difference in your day-to-day quality of life. I didn’t think they were all that special until I started testing them, and now I can’t imagine my home not smelling great all the time. Pura makes many of our favorite diffusers, and with a Pura discount code, you can make the initial investment more affordable. You can also use a Pura coupon code on scent refills. With dozens of scents to choose from, plus more seasonal offerings, you’ll want to try them all. Here’s where to find a Pura discount code or Pura promo code.</p>
+<p>We’ve liked almost everything we’ve tried from Pura, including multiple diffuser models and scents. The smart nebulizers evenly disperse pleasant fragrance throughout your home, and the app lets you adjust the strength and schedule. After trying them, you’ll probably want to spread the word, too. Refer your friends, and you’ll both get $20—yours toward any purchase, and theirs as a Pura discount code on orders over $50. Stack these bonuses with Pura deals for even more savings.</p>
+<p>One of the best times to use a Pura coupon is during seasonal shopping holidays. Treat yourself or a loved one to a new home fragrance with 25% off your order using Pura coupon code PURA25OFF during checkout. This is a great way to save on scent refills or new diffusers.</p>
+<p>Pura makes some of the best diffusers you can buy. Shop this Pura sale to get 20% off your new smart diffuser, which can be controlled via an app or manual buttons (depending on the model you choose). We especially like the new Pura 4 and the large-room Pura Plus, both of which can hold two scents and feature built-in color-changing nightlights.</p>
+<p>This Pura promo couldn’t be easier. Sign up for the Pura newsletter to receive a 10% discount code for your first order. Use it on diffusers, scent refills, or even a car air freshener. Just make sure you sign up before placing your order.</p>
+<p>Pura knows that more than an air freshener, a scent can create an entire mood or vibe. If it’s your first time trying Pura, you can create a custom set to match your aesthetic, and Pura will handpick the perfect fragrances and diffuser for you. If for any reason you’re not happy, you’ll get free returns and a full refund within 30 days. It’s the perfect way to try Pura out, risk-free.</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/pura-promo-code/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#309. Dermstore Coupons: 25% Off for November 2026</h2>
+    <div class="article-meta">
+        📅 Mar 17, 2026 &nbsp;|&nbsp; Category: <strong>Travel</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/dermstore-promo-code/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/67b63b919468ebbf8f0cbc7b/191:100/w_1280,c_limit/WIRED-Coupons-R2_6.png" alt="Dermstore Coupons: 25% Off for November 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/67b63b919468ebbf8f0cbc7b/191:100/w_1280,c_limit/WIRED-Coupons-R2_6.png" alt="Dermstore Coupons: 25% Off for November 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can trust what you buy at Dermstore. Unlike Sephora and Ulta, Dermstore focuses on dermatologist-tested brands, like EltaMD, SkinCeuticals, and SkinMedica—many of which you won’t find at these other stores. Also, Dermstore doesn’t just sell skincare; the retailer carries beauty tools and wellness gadgets, from LED masks to Theraguns and sex toys. And many of these products are FSA/HSA eligible.</p>
+<p>Big sales may be occasional, but Dermstore still knows how to treat its customers. Exclusive offers, free standard shipping, and a loyalty program all make shopping here worthwhile. Its BeautyFix subscription is also a fun perk: you get five dermatologist-backed full- and deluxe-size formulas each month (over $100 in value) for just $21.95-$24.95 a box, with free shipping after your first order. Read on below for some of the best Dermstore promo codes and deals we’ve found so far.</p>
+<p>If you’ve been wanting to upgrade your skincare routine, but don’t want to shell out hundreds of dollars, now’s a great time to shop at Dermstore. Until August 13, you can get up to 25% off top skincare brands from Dermstore, including SkinCeuticals, La Roche-Posay, EltaMD, and more when you use Dermstore promo code CHEERS. So whether you’re wanting to get a top-notch sunscreen for protection, or want to upgrade to a peptide cleanser, you’ll save up to 25% when you shop the Dermstore Anniversary Sale.</p>
+<p>New customers can take 15% off their first order just by signing up for the Dermstore email newsletter or SMS alerts. Select items are excluded from this promotion.</p>
+<p>As a Dermstore Rewards member, I love that I earn points on every Dermstore purchase—five points for every $1 spent, to be exact. That’s 5% cash back on every order. Just make sure you’re logged in when you check out. And unlike the welcome offer, there are zero brand exclusions, so I can use my points on any product I want.</p>
+<p>To break it down: 500 points equals a $5 credit, 1,000 points gets you $10, and 1,500 points nets $15. Even better, there are easy ways to earn points without spending money. Signing up gets you 100 points, and submitting a review gets you 50 more. It might not sound like much, but if you’re already shopping, why not stack up a little credit for later? On top of that, rewards members get exclusive access to special sales and double-points events. Your loyalty points have an expiration date of 365 days after you earn them, so make sure to use them before they’re gone.</p>
+<p>Dermstore’s auto-replenishment subscription plan makes sense for beauty products you regularly use and run through quickly. You can save up to 25 percent off your first purchase and future refills, plus free shipping on recurring deliveries. It’s flexible, too, so you can adjust the delivery schedule, pause shipments, and cancel at any time with no commitment. I’d set it up for everyday essentials like lip balm and sunscreen, but there are plenty of options, including facial mists, oils, and cleansers. Note, though, that not every product online at Dermstore is eligible for subscription.</p>
+<p>Certain shoppers can get 15 percent off any Dermstore order, not just their first. Military members, veterans, teachers, first responders, and medical workers are eligible for this promotion; you’ll just need to undergo an online verification process to receive a unique discount code. Students are also eligible for the same 15 percent discount if they verify their status as well. Keep in mind that these codes aren’t stackable, so if you have another discount, you’ll need to choose one to use.</p>
+<p>When you refer someone new to Dermstore, they’ll get the usual 15%off their first order, and you’ll score $50 in store credit. You’ll need to create a (free) Dermstore account to start sending referrals. After your friend’s order ships, Dermstore will email you within 24 hours to let you know your credit has landed in your account. You can also track how many people you’ve referred and how much credit you’ve earned from the top of your account page. Don’t forget to spend it—any referral credit expires after six months.</p>
+<p>Dermstore is known for its dermatologist-approved skincare, but don’t sleep on its beauty tools and devices. The site has put together a curated Best of Dermstore page, and I’ve tried plenty of the gadgets myself. Many of our favorite LED masks are featured, like the Dr. Dennis Gross SpectraLite FaceWare Pro, Skin Gym Wrinklit Heart LED Mask, and the Therabody TheraFace Mask Glo. Dermstore also carries a decent Therabody lineup; I always pack the TheraFace Depuffing Wand when I travel for its hot-and-cold therapy, and the Theraguns are powerful recovery tools for sore muscles.</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/dermstore-promo-code/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#273. Norton Coupon Codes: Up to 58% Off</h2>
+    <div class="article-meta">
+        📅 Mar 06, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/norton-coupon-code/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/66ea076e56fd4954a7f91e0c/191:100/w_1280,c_limit/WIRED-Coupons-17.jpg" alt="Norton Coupon Codes: Up to 58% Off" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/66ea076e56fd4954a7f91e0c/191:100/w_1280,c_limit/WIRED-Coupons-17.jpg" alt="Norton Coupon Codes: Up to 58% Off" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Norton Antivirus is the only antivirus software I've ever used, in part because many years ago I switched to Linux, which eliminates the need for antivirus software. If you're still on macOS or Windows, though, Norton Antivirus is still a solid choice. None of these services is something anyone is excited to run, but they can save you bacon if you make a bad decision downloading questionable files or clicking links you shouldn't have. The best way to stay protected without spending a fortune is to use a Norton coupon code to get yourself a deal.</p>
+<p>While I’ve only ever used the Antivirus offering, the real way to save is to bundle several services and use a coupon code for the lot. With Norton, that means Norton 360, which gets you the Antivirus, malware, ransomware, and hacking protection, along with a VPN and dark web monitoring, for up to three devices. You also get a password manager and 2GB of online storage. With this Norton coupon code, you get all that for $40 for the first year, which is about the same as paying for a VPN alone. Norton 360 Deluxe gets you everything that comes with the regular version, but it works with five devices and gives you 50GB of online storage.</p>
+<p>LifeLock is Norton’s usual online protection suite, but adds up to $1 million in potential coverage if you experience financial loss due to identity theft. With this Norton coupon code, Norton 360 with LifeLock is just $8.33 per month.</p>
+<p>If you want to get (and stay) serious about your privacy and protection, and the overall health and longevity of your computer, I’d suggest investing in an antivirus protection plan for your whole setup. With Norton 360 Antivirus Plus, you’ll get powerful antivirus protection for your device, including AI-powered Scam Protection, Password Manager, and 2 GB Cloud Backup. And you can get even more peace of mind with a 60-day money-back guarantee. Best of all, Norton 360 Antivirus Plus is 50% off right now, taking it from $60 per year to only $30—which works out to just $2.50 per month—a small investment worth so much more in protection and peace of mind.</p>
+<p>If you want to protect more than a few devices, the small business plans are the way to go. These coupons will get you $100 off the Small Business Premium plan and $80 off the Small Business plan. These plans cover two devices per user and up to five users.</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/norton-coupon-code/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#336. Petlibro Offers: 30% Off in November 2026</h2>
+    <div class="article-meta">
+        📅 Jan 17, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/petlibro-discount-code/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/67b63b9283a9f95e0ab9b215/191:100/w_1280,c_limit/WIRED-Coupons-R2_3.png" alt="Petlibro Offers: 30% Off in November 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/67b63b9283a9f95e0ab9b215/191:100/w_1280,c_limit/WIRED-Coupons-R2_3.png" alt="Petlibro Offers: 30% Off in November 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>As the pet tech writer here on the WIRED Reviews team, I’ve tested over 100 pet-related products, including automatic pet feeders, pet water fountains, and pet cameras. The one brand I keep buying for myself—and recommending to friends and family with pets—is Petlibro.</p>
+<p>Petlibro dominates the market for high-tech, seamlessly designed automatic feeders and pet fountains. Most of their products include a connected app to make pet parenting easier, whether you’re near or far. Where most pet tech falls flat, with poorly translated or confusing instructions and crowded, buggy apps, Petlibro shines. Petlibro makes it easy to monitor your pets: with real-time updates, scheduled feedings, activity logs, and reminders so you can always keep tabs on them and their needs. Although Petlibro products aren’t the cheapest, I still consider them a great value for how well-designed and reliable they are. But you’re in luck. We love the brand so much that we’ve gathered the best Petlibro discount codes and coupons to make spoiling your pet easier (and cheaper) than ever.</p>
+<p>I could go on and on (and I have) about the importance of pet hydration, especially with cats. Cats sometimes struggle to consume enough water, which can lead to potentially lethal UTIs and blockages, especially in male cats. Unlike dogs, cats are generally quite particular in their likes and dislikes, and cats can see stagnant water as potentially harmful. If the cat was in the wild, stagnant water has more potential for harmful bacteria. Cats are more drawn to moving water in nature, and a pet fountain (like those from Petlibro) helps encourage them to drink more by emulating what they’re naturally drawn to. Read my whole spiel here for more information about pet fountains.</p>
+<p>This month is pet hydration month at Petlibro, which means huge discounts of over 30% on the best pet health products, including bundles, discounts on automatic litter boxes, and heavily-discounted food and water solutions. Plus, many are FSA/HSA eligible for even more financial help.</p>
+<p>If you're already in the market for a new feeder and fountain, one of the easiest ways to save is by buying this essential pet tech in bundles. One of the best Petlibro bundles I’ve seen are for the RFID Smart Dining Bundle (now $10 off), which gives you two RFID Feeders, and an RFID Fountain, which helps to more closely monitor how much each pet is drinking or eating, and ensures no selfish pet gets more than their fair share of kibble. Plus, my ultimate favorite two Petlibro products, the Polar Wet Food Feeder (which is essentially a mini-fridge for your cats canned wet food) and Granary Camera Feeder (my #1 pick feeder with a crystal clear video feed) are on sale in a bundle, for $10 off.</p>
+<p>Once you've tried (and loved) your Petlibro products, you can give a 15% off discount to a friend and get 30% off when they buy. When you refer a friend, you’ll both save. Plus, if you refer three friends, you’ll get a $50 gift card. Those are huge savings you could use on a cat water fountain, automatic cat feeder, and more!</p>
+<p>This brand-new AI-enabled pet camera is sleek, and the app is intuitive and easy to use. (Read my full review here.) The Scout Smart camera has 1080p HD video, color night vision, two-way audio, and an option to mount. As the Scout camera captures footage, the built-in AI quickly learns which pet is which, and it uploads taken photos for the human to review to continually get smarter. Through the app, you can view live footage, watch clips organized by day, pet, and activity type, and review 30-second highlight reels of each day. This sleek tech-y pet camera is worth checking out, and made even more affordable with 20% off when you use Petlibro discount code PETCAM at checkout.</p>
+<p>I recommend that every cat owner get an automatic cat water fountain, as they help promote increased water consumption to often chronically dehydrated cats (which then leads to health issues like potentially lethal UTIs). A cat water fountain is more work, but gives more rewards. You’ll need to make sure you’re cleaning it weekly, and replacing filters every three weeks or so (the Petlibro app sends helpful reminders). One of the best ways to make sure you’re staying on schedule—and saving while you’re at it—is by subscribing to automatically receive replacement filters. Right now, you can get 15% off fountain replacement filters with a subscription.</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/petlibro-discount-code/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#348. Skullcandy Discount Code: 30% Off | November 2026</h2>
+    <div class="article-meta">
+        📅 Jan 09, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/skullcandy-discount-code/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/67b63b9c2c751893c256c1e8/191:100/w_1280,c_limit/WIRED-Coupons-R2_13.png" alt="Skullcandy Discount Code: 30% Off | November 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/67b63b9c2c751893c256c1e8/191:100/w_1280,c_limit/WIRED-Coupons-R2_13.png" alt="Skullcandy Discount Code: 30% Off | November 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Skullcandy makes cool, colorful, affordable audio gear—think wireless earbuds, wireless headphones, gaming headsets, and Bluetooth speakers. Its products can’t compete with high-end audio brands like Bose, Sonos, and Sennheiser, but they’re not really trying to. People go to Skullcandy for super-affordable, highly stylized, and customizable audio gear. Plus, Skullcandy beats those brands on value, with tons of lower-priced headphones in fun styles and colors. Here’s where to find Skullcandy promo codes and other Skullcandy deals.</p>
+<p>Open earbuds are a great way to hear the world around you while also tuning into your favorite music, audiobook, or podcast. We really like using them when working out in nature or in the yard, where hearing someone honk or yell at you can be helpful. The Skullcandy Push 720 Open Earbuds are 35% off right now, so if you’ve been curious about open earbuds, now’s a great time to buy.</p>
+<p>Folks who want a gaming headset will be happy with the swivel mic on the Crusher Plyr 720 (now on sale at 33% off), which makes it easy to chat with friends and foes during tense online gaming sessions.</p>
+<p>Don’t see what you’re looking for here? Be sure to check out the full list of Skullcandy options on sale right now on the company’s website. I’d also recommend checking out our Skullcandy discount codes and coupons, which rotate often to ensure you’re getting the best deals possible.</p>
+<p>If you are an audio enthusiast, you may want to consider joining Skullcandy Rewards, which offers perks like free shipping, special offers, rewards, and early access to exclusive products. It’s free to join, and one of the best perks is free shipping on orders over $49. When you sign up, you’ll get 25 points toward your next reward, and every purchase you make earns more points, which can be redeemed for discounts on future purchases. Members also get first-look access to new product drops and limited-edition items, plus monthly product giveaways.</p>
+<p>We love Bluetooth speakers—they’re portable, durable, deliver solid sound, and are reasonably priced. Now, Skullcandy has two pocket-sized Session speakers that bring the music anytime, anywhere. With the SESSION 360 model, you’ll get a palm-sized, skate-wheel-inspired design that travels easily with you. You can clip it, stick it, or hang it using the strap and magnetic mount to play music anywhere. It also offers up to 20 hours of battery life and a waterproof build. SESSION 540 is another compact, rugged model that straps to your gear or snaps into place with a magnetic mount, so you can bring it on virtually every adventure. It also offers 17 hours of battery life and impressive sound for a small model.</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/skullcandy-discount-code/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#291. Loop Earplugs Discount Codes: 40% Off</h2>
+    <div class="article-meta">
+        📅 Dec 20, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://www.wired.com/story/loop-earplugs-discount-code/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.wired.com/photos/67b63b995a505b018b67ed92/191:100/w_1280,c_limit/WIRED-Coupons-R2_10.png" alt="Loop Earplugs Discount Codes: 40% Off" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.wired.com/photos/67b63b995a505b018b67ed92/191:100/w_1280,c_limit/WIRED-Coupons-R2_10.png" alt="Loop Earplugs Discount Codes: 40% Off" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Loop earplugs are among the best reusable earplugs you can buy. I keep a pair attached to my car keys at all times. As a live music enthusiast who frequently travels to some of the loudest music festivals on the planet, I take earplugs seriously. I want to protect my hearing while keeping the sound clear and not muddy or muffled. These are worth it, especially when they’re even cheaper with a Loop earplugs discount code. They’re comfortable and reduce noise without obscuring the music, ensuring an excellent experience without compromising my hearing the next day.</p>
+<p>Loop earplugs come with multiple ear tip sizes so you can find the best fit, plus a handy carrying case that’ll keep them clean and easy to find between uses. I also really like how they look in your ears. They’re almost like jewelry. They stay comfortable and secure—I’ve worn mine for over twelve hours at a time, and I love them so much that I’ve purchased them with my own money (even without a Loop earplugs promo code). Your ears will thank you later.</p>
+<p>If you’re an avid concertgoer or, like me, just need absolute peace and quiet to fall asleep, you’ll want to grab a couple of pairs of Loop earplugs. Having a few pairs handy is ideal, so you can keep one in your car, one in your room, and one in your purse or bag to make sure you have protection on hand when you least expect it. Plus, they’re great to give to the people you’re with who don’t have protection at loud events like concerts or Monster Truck rallies. You can save 10, 15, or 20 percent on Loop earplug bundle deals, which include the good night bundle for enhanced sleep protection, the full coverage bundle for a myriad of needs, the daily calm bundle, and more.</p>
+<p>One of the best ways to save is through the Loop archive sale, which offers discounts of up to 40% on products with discontinued colors and sold-out favorites. All you need to do is sign up with your email address. Once you’re signed up, you’ll receive a password via email to access the protected sale archive items. Look at you, industry insider!</p>
+<p>One of the easiest ways to save on your first purchase at Loop is to sign up for their emails to receive a 10% Loop discount code. All you need to do is enter your email address, and you'll receive a 10% promo code directly in your inbox for your first purchase. Plus, when you sign up, you’ll get exclusive Loop coupons and discount codes, limited-time offers, new product drops, seasonal sales, bundle deals, and special edition releases.</p>
+<p>Like many other brands, Loop has an insider program that rewards you for purchases you were already planning to make. Loop Circle is the Loop rewards program, where members earn points on purchases to unlock member-only rewards when you shop. If you go to concerts often or are a professional musician who needs multiple pairs of earplugs, joining Loop Circle is a great way to earn even more rewards.</p>
+<p>The Quiet 2 are the best Loop earplugs for sleep. They can block up to 27 dB of noise, and they’re made of soft silicone, so they’ll stay comfortable even if you’re a side sleeper. They’re snug, secure, and small-ear-friendly. We also appreciate that they come in multiple colors and are easy to clean with soap and water.</p>
+<p>This Daily Calm bundle is perfect for everyday noise reduction. You’ll get the Loop Engage 2 Plus, which are essentially noise-canceling headphones for your day-to-day life. They filter out a little bit of noise—16 dB by themselves, or 25 dB with the included Mute accessory—so you can stay engaged in conversations without getting distracted or overstimulated. The Loop Dream is meant for sleep, with an entirely silicone design and a very low-profile fit. With a Loop earplugs promo code, they’re 20% off.</p>
+<p>This Dreamville gift set bundle is perfect if you’re looking for Loop earplugs for concerts. It includes the Loop Experience 2, my favorite earplugs for loud music festivals, in a special Tomorrowland color scheme. With this Loop earplugs discount code, you’ll get 20% off and a connector cord that keeps the earplugs attached around your neck for easy access when you need to pop them in and out. Also included is a pair of Loop Dream earplugs for sleep, which will help you catch some shut-eye even if your festival neighbors are partying until sunrise.</p>
+<p>Shop this Loop earplugs sale to get two pairs for 20% off. They’re great for students. The Loop Quiet 2 helps dampen the noise around you, like when you’re locked in at the library trying to finish an essay. And the Loop Engage 2 can help you stay focused during long lectures when your fellow students are yapping in the background.</p>
+<p>Do you know any parents in need of better shut-eye? This Tired Parent gift set bundle includes two pairs of Loop Dream in your choice of four colors, with the second pair at 50% off right now. These all-silicone earplugs will help you fall asleep and stay asleep—whether you’re trying to muffle a snoring partner, a colicky baby, or the too-loud, battery-operated toys your kiddo got for their birthday, these will come in handy.</p>
+<p>Want to protect your hearing in style? That’s where Swarovski Loop earplugs come in. The limited-edition Swarovski Loop earplugs disguise vital protection as jewelry, making them the perfect accessory for your next concert. You don't have to sacrifice style for safety. Crafted from glossy chrome with octagon crystals in 3D-printed bezels, they blend Swarovski’s iconic design with Loop’s high-end sound control. These limited-edition Swarovski Loop earplugs sell out fast, so be sure to grab ‘em before they do again!</p>
+<p>Take Up to 25% Off Custom Prints with VistaPrint Promo Code</p>
+<p>Take 10% Off Legal Services with This LegalZoom Promo Code</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.wired.com/story/loop-earplugs-discount-code/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html" class="active">29</a><a href="page30.html">30</a><a href="page31.html">31</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>
